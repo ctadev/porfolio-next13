@@ -29,7 +29,10 @@ const Navbar = () => {
           <Link href="#contact" scroll={false}>
             <li className={s.item}>Contacts</li>
           </Link>
-          <Link href="#about" scroll={false}>
+          <Link
+            href="https://docs.google.com/document/d/1yQXkfRsHRm6XBuoPG0Ota3d23bFp3VxFpMe5XvHBEP8/"
+            target="_blank"
+          >
             <li className={`${s.resume} buttonStyle`}>Resume</li>
           </Link>
         </ul>
