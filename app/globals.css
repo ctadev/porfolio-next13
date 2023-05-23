@@ -6,8 +6,30 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-body{
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   overflow-x: hidden;
+  background-color: #181f2a;
+  color: white;
+}
+
+@layer components {
+  .techstack-items {
+    @apply py-1 px-2 bg-black rounded-md;
+  }
+  .case-list {
+    @apply flex flex-col items-center;
+  }
+  .case-title {
+    @apply font-semibold text-xl;
+  }
+  .case-wrapper {
+    @apply flex flex-col items-center gap-2 mt-4 text-gray-300;
+  }
 }
