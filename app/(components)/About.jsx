@@ -48,7 +48,7 @@ const About = () => {
         {/* Right Section */}
         <section className="flex flex-col items-center justify-center md:w-1/2">
           <Image
-            src="https://www.congta.ca/static/media/certificate.9f8c26853349112b981acb8f8d46dd74.svg"
+            src="https://cong-portfolio.vercel.app/static/media/certificate.9f8c26853349112b981acb8f8d46dd74.svg"
             alt=""
             height={250}
             width={200}
