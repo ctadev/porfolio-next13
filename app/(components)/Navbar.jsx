@@ -71,7 +71,7 @@ const s = {
     "text-[3rem] font-arizonia font-bold pl-4 cursor-pointer hover:text-[cyan]",
 
   menu_open:
-    "absolute z-50 top-[86px] right-[-100%] pr-6 flex flex-col gap-4 md:gap-12 pt-24 items-center justify-start h-[400px] rounded-lg w-1/2 bg-slate-500/80 md:flex-row md:static md:h-auto md:w-auto md:pt-0 md:bg-transparent transition-all",
+    "absolute z-50 top-[86px] right-[-100%] pr-6 flex flex-col gap-4 md:gap-12 pt-24 items-center justify-start h-[400px] rounded-lg w-1/2 bg-slate-400/90 md:flex-row md:static md:h-auto md:w-auto md:pt-0 md:bg-transparent transition-all",
   menu_close: "right-[0%]",
   item: "cursor-pointer text-[2rem] font-nothing sm:text-[1.5rem] relative font-lora after:absolute after:inset-x-0 after:bottom-[-3px] after:scale-x-0 after:origin-left after:h-[3px] after:bg-gradient-to-r from-[cyan] to-purple-500 after:transition-all hover:after:scale-x-100",
   resume:
