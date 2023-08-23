@@ -9,6 +9,7 @@ import {
 } from "./(components)";
 import getProject from "./(hooks)/getProject";
 import getExperince from "./(hooks)/getExperience";
+import { Metadata } from "next";
 
 import {
   Arizonia,
