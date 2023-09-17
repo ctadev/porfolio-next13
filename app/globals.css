@@ -9,14 +9,75 @@
   scroll-behavior: smooth;
 }
 
+.heading1 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 83px;
+}
+
+.social_icons:hover {
+  fill: #ffbe62;
+}
+
+.box-shadow-blue {
+  box-shadow: 10px 10px 10px #cadcf6;
+}
+
+.box-shadow-dark {
+  filter: drop-shadow(0 0 20px #1f2e48);
+}
+
+.box-shadow-light {
+  filter: drop-shadow(0 0 20px #e0ecff);
+}
+
+.header_li:hover > .header_icons > .header_icon {
+  fill: #0252cd;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  background-image: url("/leftdarkarrow.svg");
+  height: 40px;
+  width: 40px;
+}
+
+.swiper-button-next {
+  background-image: url("/rightdarkarrow.svg");
+  height: 40px;
+  width: 40px;
+}
+
+.li_container:hover > .exp_icon {
+  fill: #0252cd;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   overflow-x: hidden;
-  background-color: #181f2a;
-  color: white;
+}
+
+@layer base {
+  body {
+    @apply bg-white-900 dark:bg-black-200 dark:text-white font-poppins overflow-x-hidden;
+  }
 }
 
 @layer components {
