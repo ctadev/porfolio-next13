@@ -12,7 +12,7 @@ const Projects = () => {
             Featured
             <span className="relative mx-3 whitespace-nowrap">
               Projects
-              <div className="h-[15px] w-full bg-blue-secondary absolute left-0 bottom-2 -z-10" />
+              <div className="h-[15px] w-full bg-blue-secondary absolute left-0 bottom-1 md:bottom-2 -z-10" />
             </span>
           </h1>
         </section>

@@ -15,7 +15,7 @@ const MyService = () => {
             What
             <span className="relative mx-3 whitespace-nowrap">
               service
-              <div className="h-[15px] w-full bg-blue-secondary absolute left-0 bottom-2 -z-10" />
+              <div className="h-[15px] w-full bg-blue-secondary absolute left-0 bottom-1 md:bottom-2 -z-10" />
             </span>
             do I provide
           </h1>

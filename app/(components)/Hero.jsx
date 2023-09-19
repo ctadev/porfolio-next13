@@ -18,7 +18,7 @@ const Hero = () => {
               <h1>Professional</h1>
               <div className="relative w-fit">
                 <h2 className="">Web Developer</h2>
-                <div className="w-full h-[20px] absolute bg-blue-secondary left-0 bottom-1 -z-10" />
+                <div className="w-full md:h-[20px] absolute bg-blue-secondary left-0 -bottom-1 h-[15px] lg:bottom-1 -z-10" />
               </div>
               <h1>based in Canada</h1>
             </div>

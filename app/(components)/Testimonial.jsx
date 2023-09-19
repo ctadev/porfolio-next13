@@ -41,9 +41,7 @@ const Testimonial = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
+        pagination={widthSize > 800 ? true : false}
         navigation={widthSize > 800 ? true : false}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper max-w-[1440px] w-full"

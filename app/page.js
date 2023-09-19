@@ -20,7 +20,7 @@ export default async function Home() {
   const skills = await getSkills();
 
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Navbar />
       <Hero />
       <Skills skills={skills} />
