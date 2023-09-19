@@ -7,7 +7,7 @@ import { useTheme } from "next-themes";
 const Hero = () => {
   const { theme } = useTheme();
   return (
-    <main className="bg-white-800 dark:bg-black-300 flex items-center justify-center">
+    <main className="bg-white-800 dark:bg-black-300 flex items-center justify-center mt-[80px]">
       <div className="max-w-[1440px] w-full flex flex-col md:flex-row items-center justify-center md:pl-6 py-[20px] lg:py-[40px] gap-4">
         <div className="w-full md:w-1/2 relative flex items-center justify-center h-[450px]">
           <section className="absolute z-20 flex flex-col gap-4 py-8 px-6 md:px-0">

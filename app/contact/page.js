@@ -1,4 +1,5 @@
-import { Navbar, Footer, Collaborate } from "../(components)";
+import { Navbar, Footer } from "../(components)";
+import Collaborate from "./Collaborate";
 import Title from "./Title";
 import Form from "./Form";
 

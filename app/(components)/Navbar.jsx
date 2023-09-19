@@ -103,16 +103,16 @@ export default Navbar;
 
 const s = {
   nav_container:
-    "flex sticky top-0 left-0 z-40 w-screen items-center justify-center dark:bg-black-300 bg-white-800 h-[80px] dark:text-white",
+    "flex fixed top-0 left-0 z-40 w-screen items-center justify-center dark:bg-black-300 bg-white-800 h-[80px] dark:text-white",
   inner_container:
     "w-full relative max-w-[1440px] flex justify-between items-center pr-4",
   title:
     "text-[1.5rem] font-arizonia font-bold pl-4 cursor-pointer hover:text-[cyan]",
 
   menu_open:
-    "absolute z-50 top-[65px] bg-white-800 right-[-100%] pr-6 flex flex-col gap-2 md:gap-8 items-center justify-center h-[350px] rounded-lg w-1/2 dark:bg-black-300 md:flex-row md:static md:h-auto md:w-auto md:pt-0 md:bg-transparent transition-all",
+    "absolute z-50 top-[65px] bg-white-900/90 shadow-lg dark:bg-black-200/90 md:shadow-none md:bg-white-800 right-[-100%] pr-6 flex flex-col gap-2 md:gap-8 items-center justify-center h-[350px] rounded-lg w-[290px] md:dark:bg-black-300 md:flex-row md:static md:h-auto md:w-auto md:pt-0 md:bg-transparent transition-all",
   menu_close: "right-[0%]",
-  item: "cursor-pointer text-[2rem] font-nothing sm:text-[1rem] relative font-lora after:absolute after:inset-x-0 after:bottom-[-3px] after:scale-x-0 after:origin-left after:h-[3px] after:bg-gradient-to-r from-[cyan] to-purple-500 after:transition-all hover:after:scale-x-100",
+  item: "cursor-pointer text-[2rem] whitespace-nowrap font-nothing sm:text-[1rem] relative font-lora after:absolute after:inset-x-0 after:bottom-[-3px] after:scale-x-0 after:origin-left after:h-[3px] after:bg-gradient-to-r from-[cyan] to-purple-500 after:transition-all hover:after:scale-x-100",
   resume:
     "sm:pb-[4px] font-nothing md:pt-2 md:border-2 md:px-2 cursor-pointer text-[2rem] sm:text-[1.5rem] relative after:absolute after:inset-x-0 after:bottom-[-3px] after:scale-x-0 after:origin-left after:h-[3px] md:after:h-0 after:bg-gradient-to-r after:transition-all hover:after:scale-x-100 rounded-md md:border-cyan-500 md:hover:bg-gradient-to-r from-cyan-500 to-purple-500",
 

@@ -4,7 +4,7 @@ import CaseStudies from "./CaseStudies";
 
 export default async function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Navbar />
       <Title />
       <CaseStudies />

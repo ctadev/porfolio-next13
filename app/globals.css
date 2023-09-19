@@ -19,6 +19,10 @@
   fill: #ffbe62;
 }
 
+.div_icon:hover > .social_icons {
+  fill: #ffbe62;
+}
+
 .box-shadow-blue {
   box-shadow: 10px 10px 10px #cadcf6;
 }
