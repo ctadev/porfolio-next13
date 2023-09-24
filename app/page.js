@@ -15,7 +15,7 @@ import getExperince from "./(hooks)/getExperience";
 import getSkills from "./(hooks)/getSkills";
 
 export default async function Home() {
-  const projects = await getProject();
+  const project = await getProject();
   const experience = await getExperince();
   const skills = await getSkills();
 
@@ -26,9 +26,9 @@ export default async function Home() {
       <Skills skills={skills} />
       <MyService />
       <Experience />
-      <Projects />
+      <Projects project={project} />
       <Testimonials />
-      <Testimonial /> 
+      <Testimonial />
       <Collaborate />
       <Footer />
       {/* <Hero />

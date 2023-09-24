@@ -5,12 +5,26 @@ export default async function getProject() {
     `*[_type == "projects"]{
       name,
       "slug": slug.current,
-      description,
+      short_description,
+      long_description,
+      bg_color,
       stack[]->,
+      start_date,
+      end_date,
+      role,
       github,
       demo,
-      img,
-    }`
+      preview_image,
+      statement_image,
+      figma_image,
+      laptop_image,
+      overview,
+      showcase_stack,
+      statement,
+      learnings,
+      challenges,
+    }`,
+    { next: { revalidate: 60 } }
   );
   return projects;
 }

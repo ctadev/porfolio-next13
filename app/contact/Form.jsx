@@ -25,7 +25,7 @@ const Form = () => {
                   <Svg
                     iconName="github"
                     color="#778295"
-                    className="social_icons"
+                    className="social_icons h-[24px] w-[24px]"
                   />
                 </Link>
               </div>
@@ -73,7 +73,7 @@ const Form = () => {
               </h2>
               <input
                 type="text"
-                className="h-[80px] rounded-[20px] w-full bg-white-800 border border-[#CCE1FF] dark:border-[#2C3C56] dark:bg-black-300 outline-none px-4"
+                className="h-[50px] md:h-[80px] rounded-[20px] w-full bg-white-800 border border-[#CCE1FF] dark:border-[#2C3C56] dark:bg-black-300 outline-none px-4"
               />
             </li>
             <li>
@@ -82,7 +82,7 @@ const Form = () => {
               </h2>
               <input
                 type="text"
-                className="h-[80px] rounded-[20px] w-full bg-white-800 border border-[#CCE1FF] dark:border-[#2C3C56] dark:bg-black-300 outline-none px-4"
+                className="h-[50px] md:h-[80px] rounded-[20px] w-full bg-white-800 border border-[#CCE1FF] dark:border-[#2C3C56] dark:bg-black-300 outline-none px-4"
               />
             </li>
             <li>
@@ -90,7 +90,7 @@ const Form = () => {
               <textarea
                 rows="4"
                 cols="50"
-                className="h-[190px] rounded-[20px] w-full bg-white-800 border border-[#CCE1FF] dark:border-[#2C3C56] dark:bg-black-300 outline-none p-4"
+                className="h-[140px] md:h-[190px] rounded-[20px] w-full bg-white-800 border border-[#CCE1FF] dark:border-[#2C3C56] dark:bg-black-300 outline-none p-4"
               ></textarea>
             </li>
             <li className="flex justify-end">

@@ -21,8 +21,18 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
+      name: 'short_description',
+      title: 'Short Description',
+      type: 'string',
+    }),
+    defineField({
+      name: 'long_description',
+      title: 'Long Description',
+      type: 'string',
+    }),
+    defineField({
+      name: 'bg_color',
+      title: 'Background Color',
       type: 'string',
     }),
     defineField({
@@ -30,6 +40,21 @@ export default defineType({
       name: 'stack',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'skills'}]}],
+    }),
+    defineField({
+      title: 'Start Date',
+      name: 'start_date',
+      type: 'string',
+    }),
+    defineField({
+      title: 'End Date',
+      name: 'end_date',
+      type: 'string',
+    }),
+    defineField({
+      title: 'Role',
+      name: 'role',
+      type: 'string',
     }),
     defineField({
       title: 'Github',
@@ -42,41 +67,52 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'img',
-      title: 'Image',
+      name: 'preview_image',
+      title: 'Preview Image',
       type: 'image',
       options: {
         hotspot: true,
       },
     }),
     defineField({
-      name: 'gallery',
-      title: 'Gallery',
-      type: 'array',
-      of: [
-        {
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-        },
-      ],
+      name: 'statement_image',
+      title: 'Statement Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'figma_image',
+      title: 'Figma Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'laptop_image',
+      title: 'Laptop Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     }),
     defineField({
       title: 'Overview',
       name: 'overview',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{type: 'string'}],
     }),
     defineField({
-      title: 'Goal1',
-      name: 'goal1',
+      title: 'Show Case Stack',
+      name: 'showcase_stack',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{type: 'string'}],
     }),
     defineField({
-      title: 'Goal2',
-      name: 'goal2',
+      title: 'Problem Statement',
+      name: 'statement',
       type: 'array',
       of: [{type: 'block'}],
     }),
@@ -84,13 +120,13 @@ export default defineType({
       title: 'Learnings',
       name: 'learnings',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{type: 'string'}],
     }),
     defineField({
       title: 'Challenges',
       name: 'challenges',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{type: 'string'}],
     }),
   ],
 })

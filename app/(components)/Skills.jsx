@@ -1,4 +1,3 @@
-import React from "react";
 import { urlFor } from "../(hooks)/sanity";
 import Image from "next/image";
 

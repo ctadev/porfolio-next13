@@ -5,18 +5,27 @@ export default async function getCurrentProject(slug) {
     `*[_type == "projects" && slug.current == $slug][0]{
       name,
       "slug": slug.current,
+      short_description,
+      long_description,
+      bg_color,
       stack[]->,
+      start_date,
+      end_date,
+      role,
       github,
       demo,
-      img,
-      gallery,
+      preview_image,
+      statement_image,
+      figma_image,
+      laptop_image,
       overview,
-      goal1,
-      goal2,
+      showcase_stack,
+      statement,
       learnings,
       challenges,
     }`,
-    { slug }
+    { slug },
+    { next: { revalidate: 60 } }
   );
   return projects;
 }

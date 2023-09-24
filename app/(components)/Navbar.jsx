@@ -4,11 +4,18 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { saveAs } from "file-saver";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
+  const saveFile = () => {
+    saveAs(
+      "https://www.dropbox.com/scl/fi/53rqsl8pc9n4fsj82a4cq/Resume_IT.pdf?rlkey=w5b72iwgvodateo67gmyrxwta&dl=0"
+    );
+  };
 
   useEffect(() => {
     setMounted(true);
@@ -54,23 +61,19 @@ const Navbar = () => {
             >
               <li className={s.item}>Contact</li>
             </Link>
-            <Link
-              href="https://docs.google.com/document/d/1yQXkfRsHRm6XBuoPG0Ota3d23bFp3VxFpMe5XvHBEP8/"
-              target="_blank"
+            <li
+              className={`${s.item} flex items-center gap-2 justify-center cursor-pointer`}
+              onClick={saveFile}
             >
-              <li
-                className={`${s.item} flex items-center gap-2 justify-center`}
-              >
-                <Image
-                  src="/downblack.svg"
-                  alt="download"
-                  height={13.3}
-                  width={13.3}
-                  className="dark:invert"
-                />
-                <p className="mt-1">Resume</p>
-              </li>
-            </Link>
+              <Image
+                src="/downblack.svg"
+                alt="download"
+                height={13.3}
+                width={13.3}
+                className="dark:invert"
+              />
+              <p className="mt-1">Resume</p>
+            </li>
           </ul>
 
           <section

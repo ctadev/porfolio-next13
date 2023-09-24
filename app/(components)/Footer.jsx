@@ -28,7 +28,7 @@ const Footer = () => {
             <Svg iconName="linkin" color="#778295" className="social_icons" />
           </Link>
           <Link href="https://github.com/ctadev" target="_blank">
-             <Svg iconName="github" color="#778295" className="social_icons" />
+             <Svg iconName="github" color="#778295" className="social_icons h-[24px] w-[24px]" />
           </Link>
         </section>
       </div>
