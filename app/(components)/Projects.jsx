@@ -25,7 +25,7 @@ const Projects = ({ project }) => {
         </section>
 
         <section className="flex flex-col gap-8 w-full">
-          {project?.map((item, index) => (
+          {project.slice(0, 3)?.map((item, index) => (
             <section
               className={`flex flex-col md:flex-row ${
                 index % 2 === 1 && "md:flex-row-reverse"
