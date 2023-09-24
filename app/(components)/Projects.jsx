@@ -1,16 +1,9 @@
-"use client";
-
-import { useEffect } from "react";
 import Image from "next/image";
 import { Svg } from ".";
-import { projects } from "../(dummy_data)/project";
 import { urlFor } from "../(hooks)/sanity";
 import Link from "next/link";
 
-const Projects = ({ project }) => {
-  useEffect(() => {
-    console.log(project);
-  }, []);
+const Projects = ({ featured }) => {
   return (
     <main className="bg-white dark:bg-black-200 flex items-center justify-center pb-[40px] md:pb-[70px]">
       <div className="max-w-[1440px] w-full relative pt-[100px] pb-[20px] md:pt-[140px] md:pb-[50px] flex items-center justify-center px-6">
@@ -25,21 +18,21 @@ const Projects = ({ project }) => {
         </section>
 
         <section className="flex flex-col gap-8 w-full">
-          {project.slice(0, 3)?.map((item, index) => (
+          {featured?.selected?.map((item, index) => (
             <section
               className={`flex flex-col md:flex-row ${
                 index % 2 === 1 && "md:flex-row-reverse"
               } md:gap-6 w-full text-white pt-6 lg:py-12 rounded-[20px] px-4 ${
                 item?.bg_color
               }`}
-              key={item?.slug}
+              key={item?.slug.current}
             >
               <div
                 className={`flex flex-col gap-4 items-start justify-center pl-[25px] pt-[20px] md:pt-0 sm:pl-[40px] lg:pl-[100px] ${
                   index % 2 === 1 && "2xl:pl-[40px]"
                 }`}
               >
-                <Link href={`/case/${item?.slug}`}>
+                <Link href={`/case/${item?.slug.current}`}>
                   <h1 className="font-bold text-[32px] leading-[37px] lg:text-[48px] lg:leading-[55px]">
                     {`${item?.name} - ${item?.short_description}`}
                   </h1>
@@ -55,7 +48,7 @@ const Projects = ({ project }) => {
                   ))}
                 </ul>
 
-                <Link href={`/case/${item?.slug}`}>
+                <Link href={`/case/${item?.slug.current}`}>
                   <div
                     className={`flex items-center justify-start gap-2 mt-5 cursor-pointer ${
                       index % 2 === 1 && "flex-row-reverse"
@@ -74,12 +67,12 @@ const Projects = ({ project }) => {
               </div>
 
               <Link
-                href={`/case/${item?.slug}`}
+                href={`/case/${item?.slug.current}`}
                 className="w-full flex-grow mb-8 mt-2 sm:mt-6 sm:mb-6 md:mt-0 md:mb-0 md:h-[330px] h-[170px] sm:h-[200px]"
               >
                 <aside className="relative h-full w-full">
                   <Image
-                    src={urlFor(item.preview_image).url()}
+                    src={urlFor(item?.preview_image).url()}
                     alt="project"
                     fill
                   />
