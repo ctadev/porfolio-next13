@@ -11,12 +11,12 @@ import {
   Collaborate,
 } from "./(components)";
 import getFeaturedProjects from "./(hooks)/getFeaturedProject";
-import getExperince from "./(hooks)/getExperience";
+import getTestimonials from "./(hooks)/getTestimonials";
 import getSkills from "./(hooks)/getSkills";
 
 export default async function Home() {
   const featured = await getFeaturedProjects();
-  const experience = await getExperince();
+  const testimonials = await getTestimonials();
   const skills = await getSkills();
 
   return (
@@ -28,7 +28,7 @@ export default async function Home() {
       <Experience />
       <Projects featured={featured[0]} />
       <Testimonials />
-      <Testimonial />
+      <Testimonial testimonials={testimonials} />
       <Collaborate />
       <Footer />
       {/* <Hero />

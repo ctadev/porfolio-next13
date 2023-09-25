@@ -5,14 +5,14 @@ import { useState, useEffect, useRef } from "react";
 import { Svg } from ".";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { testimonials } from "../(dummy_data)/testimonial";
+import { urlFor } from "../(hooks)/sanity";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const Testimonial = () => {
+const Testimonial = ({ testimonials }) => {
   const [widthSize, setWidthSize] = useState(null);
 
   function logitwidth() {
@@ -46,15 +46,12 @@ const Testimonial = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper max-w-[1440px] w-full"
       >
-        {testimonials.map((item) => (
-          <SwiperSlide key={item.img}>
-            <section
-              className="flex flex-col md:flex-row gap-6 mt-12 px-6 sm:px-[60px] xl:px-[100px]"
-              key={item.img}
-            >
+        {testimonials?.map((item) => (
+          <SwiperSlide key={item.name}>
+            <section className="flex flex-col md:flex-row gap-6 mt-12 px-6 sm:px-[60px] xl:px-[100px]">
               <div className="rounded-[16px] h-[328px] w-full md:min-h-[328px] md:min-w-[328px] relative">
                 <Image
-                  src={item.img}
+                  src={urlFor(item?.image).url()}
                   alt="client"
                   fill
                   className="rounded-[16px]"
@@ -80,17 +77,15 @@ const Testimonial = () => {
                   </li>
                 </ul>
 
-                <p className="text-white-500 dark:text-white">
-                  {item.description}
-                </p>
+                <p className="text-white-500 dark:text-white">{item?.review}</p>
 
                 <div>
                   <ul className="flex items-center gap-1">
                     <li className="h-[1px] w-[10px] bg-black dark:bg-white"></li>
-                    <li className="font-semibold">{item.author}</li>
+                    <li className="font-semibold">{item?.name}</li>
                   </ul>
                   <p className="text-white-500 dark:text-white-800">
-                    {item.profession}
+                    {item?.role}
                   </p>
                 </div>
               </aside>

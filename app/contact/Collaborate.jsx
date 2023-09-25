@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Collaborate = () => {
   return (
-    <main className="flex items-center justify-center pb-[10px]">
+    <main className="flex items-center justify-center pb-[50px]">
       <div className="max-w-[1440px] w-full px-6">
         <section className="bg-collabbg bg-center object-contain bg-no-repeat h-[300px] lg:h-[400px] bg-blue-secondary rounded-[20px] relative flex flex-col items-center justify-center gap-6 px-4 md:px-0">
           <h1 className="font-bold text-[30px] leading-[31px] lg:text-[48px] lg:leading-[55px] text-black-200 md:w-[520px] md:absolute md:left-16 md:top-1/2 md:-translate-y-1/2">

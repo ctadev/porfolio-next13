@@ -1,8 +1,8 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'experience',
-  title: 'Experience',
+  name: 'testimonials',
+  title: 'Testimonials',
   type: 'document',
   fields: [
     defineField({
@@ -11,28 +11,17 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
+      name: 'role',
+      title: 'Reviewer Job Title',
       type: 'string',
     }),
     defineField({
-      title: 'Techstack',
-      name: 'stack',
-      type: 'array',
-      of: [{type: 'reference', to: [{type: 'skills'}]}],
-    }),
-    defineField({
-      title: 'Time',
-      name: 'time',
+      name: 'review',
+      title: 'Reviewer Comments',
       type: 'string',
     }),
     defineField({
-      title: 'Live Demo Link',
-      name: 'demo',
-      type: 'string',
-    }),
-    defineField({
-      name: 'img',
+      name: 'image',
       title: 'Image',
       type: 'image',
       options: {

@@ -5,7 +5,7 @@ import Form from "./Form";
 
 export default async function Home() {
   return (
-    <main>
+    <main className="">
       <Navbar />
       <Title />
       <Form />

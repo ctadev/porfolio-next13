@@ -25,7 +25,7 @@ export default async function getCurrentProject(slug) {
       challenges,
     }`,
     { slug },
-    { next: { revalidate: 60 } }
+    { next: { revalidate: 1000 } }
   );
   return projects;
 }

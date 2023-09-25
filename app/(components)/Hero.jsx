@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 const Hero = () => {
   const { theme } = useTheme();
@@ -29,12 +30,27 @@ const Hero = () => {
               profound commitment to excellence
             </p>
             <div className="flex flex-col lg:flex-row gap-4">
-              <button className="h-[47px] lg:h-[70px] bg-blue-light dark:bg-blue-dark w-full md:w-[186px] rounded-full text-white">
-                My Work
-              </button>
-              <button className="h-[47px] lg:h-[70px] w-full md:w-[305px] rounded-full bg-white dark:bg-black-200 text-white-500 dark:text-white">
-                ctakammy@gmail.com
-              </button>
+              <Link href="/casestudies">
+                <button className="h-[47px] lg:h-[70px] bg-blue-light font-semibold dark:bg-blue-dark w-full md:w-[186px] rounded-full text-white hover:text-blue-secondary hover:animate-pulse">
+                  My Work
+                </button>
+              </Link>
+              <Link href="mailto:ctakammy@gmail.com">
+                <button className="h-[47px] lg:h-[70px] w-full md:w-[305px] rounded-full bg-white dark:bg-black-200 text-white-500 dark:text-white font-semibold relative overflow-hidden group">
+                  <div className="absolute z-30 w-full h-full top-0 left-0 flex items-center justify-center gap-6">
+                    <p className="group-hover:text-white">ctakammy@gmail.com</p>
+                    <span>
+                      <Image
+                        src="/heroemail.svg"
+                        alt="email logo"
+                        width={15}
+                        height={15}
+                      />
+                    </span>
+                  </div>
+                  <span className="bg-gradient-to-r from-[cyan] to-purple-500 absolute left-0 top-0 w-0 h-full opacity-100 group-hover:w-full duration-300 ease"></span>
+                </button>
+              </Link>
             </div>
           </section>
         </div>

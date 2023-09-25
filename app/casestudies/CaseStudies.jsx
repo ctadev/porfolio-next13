@@ -12,7 +12,7 @@ const CaseStudies = ({ project }) => {
             <Link
               href={`/case/${item.slug}`}
               key={item?.slug}
-              className="w-full md:w-fit"
+              className="w-full md:w-fit transition-all duration-300 hover:scale-105"
             >
               <li className="w-full">
                 <section

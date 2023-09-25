@@ -4,7 +4,7 @@ import { Svg } from ".";
 const Footer = () => {
   return (
     <main className="flex items-center justify-center">
-      <div className="max-w-[1440px] w-full px-6 flex items-center justify-between py-[20px]">
+      <div className="max-w-[1440px] w-full px-6 flex items-center justify-between pt-[20px] pb-[40px]">
         <section>
           <p>
             © 2023{" "}
