@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { Svg } from ".";
-import { myservice } from "../(dummy_data)/service";
+import { myservice } from "../(dummy_data)/service";;
 
 const MyService = () => {
   const { theme } = useTheme();
@@ -23,7 +23,7 @@ const MyService = () => {
 
         <section className="mt-4 pt-[50px] md:pt-0 w-full">
           <ul className="flex flex-col sm:flex-row justify-center gap-8 flex-wrap">
-            {myservice?.map((item) => (
+            {myservice?.map((item, index) => (
               <li
                 key={item.title}
                 className={`bg-[#F3F8FF] dark:bg-black-300 h-[245px] w-[237px] rounded-lg flex flex-col justify-center gap-2 px-5 hover:bg-blue-light dark:hover:bg-blue-light transition-all duration-300 lg:hover:translate-y-12 group header_li ${

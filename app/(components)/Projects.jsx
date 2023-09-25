@@ -1,11 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import { Svg } from ".";
 import { urlFor } from "../(hooks)/sanity";
 import Link from "next/link";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Projects = ({ featured }) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
-    <main className="bg-white dark:bg-black-200 flex items-center justify-center pb-[40px] md:pb-[70px]">
+    <main
+      className="bg-white dark:bg-black-200 flex items-center justify-center pb-[40px] md:pb-[70px]"
+      data-aos="fade-up"
+    >
       <div className="max-w-[1440px] w-full relative pt-[100px] pb-[20px] md:pt-[140px] md:pb-[50px] flex items-center justify-center px-6">
         <section className="absolute z-20 left-1/2 top-8 md:top-12 md:whitespace-nowrap -translate-x-1/2">
           <h1 className="font-bold text-[36px] leading-[41px] md:text-[48px] md:leading-[55px] text-black-200 dark:text-white">
@@ -26,6 +38,7 @@ const Projects = ({ featured }) => {
                 item?.bg_color
               }`}
               key={item?.slug.current}
+              data-aos={index % 2 == 1 ? "fade-right" : "fade-left"}
             >
               <div
                 className={`flex flex-col gap-4 items-start justify-center pl-[25px] pt-[20px] md:pt-0 sm:pl-[40px] lg:pl-[100px] ${
