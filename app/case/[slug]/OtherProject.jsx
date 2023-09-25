@@ -30,7 +30,7 @@ const OtherProject = ({ other, slug }) => {
           {filtered.slice(0, 2)?.map((item) => (
             <Link href={`/case/${item.slug}`} key={item.slug}>
               <li
-                className={`h-[405px] w-full md:h-[540px] md:w-[430px] rounded-[20px] bg-white dark:bg-black-300 ${
+                className={`h-[405px] w-full md:h-[540px] rounded-[20px] bg-white dark:bg-black-300 ${
                   theme === "light" ? "box-shadow-light" : "box-shadow-dark"
                 }`}
               >
