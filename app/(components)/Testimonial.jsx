@@ -31,7 +31,7 @@ const Testimonial = ({ testimonials }) => {
   }, []);
 
   return (
-    <main className="flex items-center justify-center bg-white-800 dark:bg-black-300 pb-[40px] md:pb-[60px]">
+    <main className="flex items-center justify-center bg-white-800 dark:bg-black-300">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -41,15 +41,15 @@ const Testimonial = ({ testimonials }) => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={widthSize > 800 ? true : false}
+        pagination={true}
         navigation={widthSize > 800 ? true : false}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper max-w-[1440px] w-full"
       >
         {testimonials?.map((item) => (
           <SwiperSlide key={item.name}>
-            <section className="flex flex-col md:flex-row gap-6 mt-12 px-6 sm:px-[60px] xl:px-[100px]">
-              <div className="rounded-[16px] h-[328px] w-full md:min-h-[328px] md:min-w-[328px] relative">
+            <section className="flex flex-col md:flex-row gap-6 mt-12 px-6 sm:px-[60px] xl:px-[100px] pb-[70px] md:pb-[100px]">
+              <div className="rounded-[16px] h-[328px] max-h-[328px] w-full md:min-h-[328px] md:max-h-[328px] md:min-w-[328px] md:max-w-[328px] relative">
                 <Image
                   src={urlFor(item?.image).url()}
                   alt="client"

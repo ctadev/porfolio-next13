@@ -1,12 +1,23 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 
 const Hero = () => {
   const { theme } = useTheme();
+  const [copied, setCopied] = useState(false);
+
+  const setCopiedClear = () => {
+    setCopied(false);
+  };
+  const copyClipboard = (text) => {
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(setCopiedClear, 3000);
+  };
+
   return (
     <main className="bg-white-800 dark:bg-black-300 flex items-center justify-center mt-[80px]">
       <div className="max-w-[1440px] w-full flex flex-col md:flex-row items-center justify-center md:pl-6 py-[20px] lg:py-[40px] gap-4">
@@ -35,10 +46,15 @@ const Hero = () => {
                   My Work
                 </button>
               </Link>
-              <Link href="mailto:ctakammy@gmail.com">
+              <Link
+                href="mailto:ctakammy@gmail.com"
+                onClick={() => copyClipboard("ctakammy@gmail.com")}
+              >
                 <button className="h-[47px] lg:h-[70px] w-full md:w-[305px] rounded-full bg-white dark:bg-black-200 text-white-500 dark:text-white font-semibold relative overflow-hidden group">
                   <div className="absolute z-30 w-full h-full top-0 left-0 flex items-center justify-center gap-6">
-                    <p className="group-hover:text-white">ctakammy@gmail.com</p>
+                    <p className="group-hover:text-white">
+                      {copied ? "copied to clipboard..." : "ctakammy@gmail.com"}
+                    </p>
                     <span>
                       <Image
                         src="/heroemail.svg"

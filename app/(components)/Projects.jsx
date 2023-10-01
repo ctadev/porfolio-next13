@@ -39,6 +39,7 @@ const Projects = ({ featured }) => {
               }`}
               key={item?.slug.current}
               data-aos={index % 2 == 1 ? "fade-right" : "fade-left"}
+              data-aos-duration="600"
             >
               <div
                 className={`flex flex-col gap-4 items-start justify-center pl-[25px] pt-[20px] md:pt-0 sm:pl-[40px] lg:pl-[100px] ${
