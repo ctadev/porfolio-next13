@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const saveFile = () => {
     saveAs(
-      "https://www.dropbox.com/scl/fi/53rqsl8pc9n4fsj82a4cq/Resume_IT.pdf?rlkey=w5b72iwgvodateo67gmyrxwta&dl=0"
+      "https://docs.google.com/document/d/1d8IMXVEI9U4ZODcas5bYFRFAfsGna0ix3w0hHQbldxM"
     );
   };
 
