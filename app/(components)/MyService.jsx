@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { Svg } from ".";
-import { myservice } from "../(dummy_data)/service";;
+import { myservice } from "../(dummy_data)/service";
 
 const MyService = () => {
   const { theme } = useTheme();
@@ -30,7 +30,9 @@ const MyService = () => {
                   theme === "light" ? "box-shadow-light" : "box-shadow-dark"
                 }`}
               >
-                <div className="bg-blue-light dark:bg-blue-dark w-[62px] h-[62px] rounded-lg flex items-center justify-center box-shadow-blue group-hover:bg-white header_icons">
+                <div className={`bg-blue-light dark:bg-blue-dark w-[62px] h-[62px] rounded-lg flex items-center justify-center dark:box-shadow-blue group-hover:bg-white header_icons ${
+                  theme === "light" ? "box-shadow-blue" : "box-shadow-blue-light"
+                }`}>
                   <Svg
                     iconName={item.img}
                     className="header_icon"

@@ -14,7 +14,7 @@ const CaseStudies = ({ project }) => {
               key={item?.slug}
               className="w-full md:w-fit transition-all duration-300 hover:scale-105"
             >
-              <li className="w-full">
+              <li className="w-full mb-8">
                 <section
                   className={`h-[270px] sm:h-[327px] w-full md:w-[550px] rounded-[16px] flex items-end justify-center ${item.bg_color}`}
                 >
@@ -26,7 +26,7 @@ const CaseStudies = ({ project }) => {
                     />
                   </div>
                 </section>
-                <aside className="pl-8 md:pl-14 mt-6">
+                <aside className="text-center mt-6">
                   <h1 className="text-black-200 dark:text-white font-semibold text-[32px] leading-[34px]">
                     {item?.name}
                   </h1>

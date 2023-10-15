@@ -10,6 +10,10 @@ import Testimonials from "./Testimonials";
 import Footer from "./Footer";
 import Testimonial from "./Testimonial";
 import Collaborate from "./Collaborate";
+import ExpOhhMyNails from "./ExpOhhMyNails";
+import ExpAllureNails from "./ExpAllureNails";
+import ExpJSM from "./ExpJSM";
+import ExpIntro from "./ExpIntro";
 
 export {
   Navbar,
@@ -24,4 +28,8 @@ export {
   Testimonial,
   Collaborate,
   Footer,
+  ExpOhhMyNails,
+  ExpAllureNails,
+  ExpJSM,
+  ExpIntro
 };

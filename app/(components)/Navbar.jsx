@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { saveAs } from "file-saver";
+import { Svg } from ".";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -46,12 +47,10 @@ const Navbar = () => {
               onClick={() => setToggleMenu(!toggleMenu)}
             >
               <li className={s.item}>
-                <Image
-                  src="/homenav.svg"
-                  alt="download"
-                  height={25}
-                  width={25}
-                  className="dark:invert md:hidden"
+                <Svg
+                  iconName="homenav"
+                  color={theme === "dark" ? "white" : "black"}
+                  className="h-[25px] w-[25px] md:hidden"
                 />
                 <p className="mt-1">Home</p>
               </li>
@@ -62,12 +61,10 @@ const Navbar = () => {
               onClick={() => setToggleMenu(!toggleMenu)}
             >
               <li className={s.item}>
-                <Image
-                  src="/projectnav.svg"
-                  alt="download"
-                  height={25}
-                  width={25}
-                  className="dark:invert md:hidden"
+              <Svg
+                  iconName="projectnav"
+                  color={theme === "dark" ? "white" : "black"}
+                  className="h-[25px] w-[25px] md:hidden"
                 />
                 <p className="mt-1">Case Studies</p>
               </li>
@@ -78,12 +75,10 @@ const Navbar = () => {
               onClick={() => setToggleMenu(!toggleMenu)}
             >
               <li className={s.item}>
-                <Image
-                  src="/contactnav.svg"
-                  alt="download"
-                  height={25}
-                  width={25}
-                  className="dark:invert md:hidden"
+              <Svg
+                  iconName="contactnav"
+                  color={theme === "dark" ? "white" : "black"}
+                  className="h-[25px] w-[25px] md:hidden"
                 />
                 <p className="mt-1">Contact</p>
               </li>
@@ -93,11 +88,10 @@ const Navbar = () => {
               onClick={saveFile}
             >
               <div className="relative h-[25px] w-[25px] md:h-[15px] md:w-[15px]">
-                <Image
-                  src="/downblack.svg"
-                  alt="download"
-                  fill
-                  className="dark:invert"
+              <Svg
+                  iconName="resumenav"
+                  color={theme === "dark" ? "white" : "black"}
+                  className="h-[25px] w-[25px] md:h-[15px] md:w-[15px]"
                 />
               </div>
               <p className="mt-1">Resume</p>

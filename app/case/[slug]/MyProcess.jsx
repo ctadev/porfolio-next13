@@ -12,7 +12,7 @@ const MyProcess = () => {
           <h1 className="font-semibold text-[28px] leading-[29px] md:text-[32px] md:leading-[34px] text-black-200 dark:text-white">
             My Process
           </h1>
-          <ul className="flex flex-wrap items-center justify-between gap-8 mt-8 w-full">
+          <ul className="flex flex-wrap items-center justify-center md:justify-between gap-8 mt-8 w-full">
             {myprocess.map((item) => (
               <li
                 key={item.img}

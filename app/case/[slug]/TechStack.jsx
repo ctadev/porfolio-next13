@@ -22,7 +22,7 @@ const TechStack = ({ stack, role, startDate, endDate }) => {
           </ul>
         </section>
 
-        <section className="mt-[50px] md:mt-[80px] flex flex-col justify-start mb-[20px]">
+        <section className="mt-[50px] md:mt-[80px] flex flex-col justify-start items-center mb-[20px]">
           <h3 className="font-semibold text-[12px] leading-[17px] text-blue-light dark:text-blue-dark md:text-[14px] md:leading-[20px]">
             Technoloigies used
           </h3>
