@@ -11,7 +11,7 @@ const FigmaTemplate = ({ image }) => {
       </div>
       <div className="relative h-[209px] md:h-[600px] lg:h-[862px] w-full">
         <Image
-          src={urlFor(image).url()}
+          src={urlFor(image)?.url()}
           alt="jobit"
           fill
           className="object-cover"

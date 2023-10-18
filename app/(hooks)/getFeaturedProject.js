@@ -5,7 +5,7 @@ export default async function getFeaturedProjects() {
     `*[_type == "featured"]{
       selected[]->,
     }`,
-    { next: { revalidate: 1000 } }
+    { next: { revalidate: 500 } }
   );
   return featured;
 }

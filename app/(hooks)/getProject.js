@@ -24,7 +24,7 @@ export default async function getProject() {
       learnings,
       challenges,
     }`,
-    { next: { revalidate: 1000 } }
+    { next: { revalidate: 500 } }
   );
   return projects;
 }

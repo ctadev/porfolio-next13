@@ -8,6 +8,8 @@ export const metadata = {
     "Cong's Portfolio created by using NextJs frontend and Sanity IO backend",
 };
 
+export const revalidate = 3600;
+
 import {
   Arizonia,
   Nothing_You_Could_Do,
