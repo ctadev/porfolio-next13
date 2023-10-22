@@ -8,7 +8,8 @@ export default async function getOtherProject(slug) {
       img,
       description,
     }`,
-    { slug }
+    { slug },
+    { next: { revalidate: 500 } }
   );
   return projects;
 }
