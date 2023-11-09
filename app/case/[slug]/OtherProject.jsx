@@ -26,7 +26,7 @@ const OtherProject = ({ other, slug }) => {
           </h1>
         </section>
 
-        <ul className="mt-[20px] md:mt-[40px] flex flex-col md:flex-row gap-6">
+        <ul className="mt-[20px] md:mt-[40px] grid md:grid-cols-2 gap-6">
           {filtered.slice(0, 2)?.map((item) => (
             <Link href={`/case/${item.slug}`} key={item.slug}>
               <li
